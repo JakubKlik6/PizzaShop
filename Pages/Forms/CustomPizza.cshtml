@@ -3,5 +3,21 @@
 @{
 }
 
-<a class="nav-link text-dark" asp-area="" asp-page="CheckOut/CheckOut">CheckOut</a>
-	
+<div class="text-center container">
+	<h1>Create your own pizza</h1>
+	<form method="post" class="mx-auto mt-5 mb-5 px-5 pt-5 rounded-5 alert-light col-4">
+		<input type="text" asp-for="Pizza.PizzaName" class="text-center mb-3" placeholder="Pizza a name..." />	<br />
+
+		<p align="left" style="margin-left:25px">
+		<input type="checkbox" asp-fragment="Pizza.TomatoSauce" placeholder="Tomato sauce..." />Tomato sauce <br />
+		<input type="checkbox" asp-fragment="Pizza.Cheese" placeholder="Cheese..." />Cheese<br />
+		<input type="checkbox" asp-fragment="Pizza.Pepperoni" placeholder="Pepperoni..." />Pepperoni<br />
+		<input type="checkbox" asp-fragment="Pizza.Ham" placeholder="Ham..." />Ham<br />
+		<input type="checkbox" asp-fragment="Pizza.Pineapple" placeholder="Pineapple..." />Pineapple<br />
+		<input type="checkbox" asp-fragment="Pizza.Beef" placeholder="Beef..." />Beef<br />
+		<input type="checkbox" asp-fragment="Pizza.Pork" placeholder="Pork..." />Pork<br />
+		</p>
+
+		<button class="btn btn-outline-primary mt-3" type="submit">Order</button>
+	</form>
+</div>
