@@ -28,7 +28,7 @@ namespace PizzaShop.Pages.Forms
 			if (Pizza.Beef) PizzaPrice += 5;
 			if (Pizza.Pork) PizzaPrice += 6;
 
-            return RedirectToPage("/Checkout/Checkout", new {Pizza.PizzaName, PizzaPrice });
+            return RedirectToPage("/CheckOut/CheckOut", new {Pizza.PizzaName, PizzaPrice });
 		}
     }
 }

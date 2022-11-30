@@ -8,11 +8,11 @@ namespace PizzaShop.Pages
     {
         public List<PizzasModel> fakePizzaDataBase = new List<PizzasModel>
         {
-            new PizzasModel() {ImageTitle="Margerita",PizzaName="Margerita",BasePrice = 10,TomatoSauce = true,Cheese = true,FinalPirce = 14},
+            new PizzasModel() {ImageTitle="Margerita",PizzaName="Margerita",BasePrice = 10,TomatoSauce = true,Cheese = true,FinalPrice = 14},
 
-			new PizzasModel() {ImageTitle="Bolognese",PizzaName="Bolognese",BasePrice = 15,TomatoSauce = true,Cheese = true,Ham = true, FinalPirce = 20},
+			new PizzasModel() {ImageTitle="Bolognese",PizzaName="Bolognese",BasePrice = 15,TomatoSauce = true,Cheese = true,Ham = true, FinalPrice = 20},
 
-			new PizzasModel() {ImageTitle="Carbonara",PizzaName="Carbonara",BasePrice = 16,TomatoSauce = true,Cheese = true,Pork = true, FinalPirce = 22},
+			new PizzasModel() {ImageTitle="Carbonara",PizzaName="Carbonara",BasePrice = 16,TomatoSauce = true,Cheese = true,Pork = true, FinalPrice = 22},
 		};
         public void OnGet()
         {

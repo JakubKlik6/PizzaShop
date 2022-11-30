@@ -12,6 +12,6 @@
 		public bool Pineapple { get; set; }
 		public bool Beef { get; set; }
 		public bool Pork { get; set; }
-		public float FinalPirce { get; set; }
+		public float FinalPrice { get; set; }
 	}
 }
