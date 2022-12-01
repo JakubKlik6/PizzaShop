@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using PizzaShop.Data;
+using PizzaShop.Models;
 
 namespace PizzaShop.Pages.CheckOut
 {
@@ -9,7 +11,12 @@ namespace PizzaShop.Pages.CheckOut
         public string PizzaName { get; set; }
         public float PizzaPrice { get; set; }
         public string ImageTitle { get; set; }
-        
+
+        private readonly AppDbContext _context;
+        public CheckOutModel(AppDbContext context)
+        {
+            _context = context;
+        }
         //If user won't give us data, set default values
         public void OnGet()
         {
@@ -17,10 +24,17 @@ namespace PizzaShop.Pages.CheckOut
             {
                 PizzaName = "Custom";
             }
-            if(string.IsNullOrWhiteSpace(ImageTitle))
+            if (string.IsNullOrWhiteSpace(ImageTitle))
             {
                 ImageTitle = "Create";
             }
+
+            PizzaOrder pizzaOrder = new PizzaOrder();
+            pizzaOrder.PizzaName = PizzaName;
+            pizzaOrder.BasePrice = PizzaPrice;
+
+            _context.PizzaOrders.Add(pizzaOrder);
+            _context.SaveChanges();
         }
     }
 }
